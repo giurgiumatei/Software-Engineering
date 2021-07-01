@@ -1,0 +1,38 @@
+title Create Conference
+actor Admin
+participant Scheduler
+participant EmailsManager
+actor Chair
+actor PCMember
+
+activate Scheduler
+participant ActivationManager
+Admin->Scheduler:scheduleConference
+deactivate Scheduler
+
+Admin->EmailsManager:inviteByEmail
+actor PCMember
+
+database Database
+EmailsManager->Chair:sendChairActivationEmail
+
+activate ActivationManager
+Chair->ActivationManager:setChairAccount
+ActivationManager->Database:saveChairAccount
+deactivate ActivationManager
+activate EmailsManager
+Chair->EmailsManager:inviteByEmail
+alt for Chair
+EmailsManager->Chair:sendChairActivationEmail
+activate ActivationManager
+Chair->ActivationManager:setChairAccount
+ActivationManager->Database:saveChairAccount
+deactivate ActivationManager
+else for PC Member
+EmailsManager->PCMember:sendPCMemberActivationEmail
+activate ActivationManager
+PCMember->ActivationManager:setPCMemberAccount
+ActivationManager->Database:savePCMemberAccount
+deactivate ActivationManager
+end
+deactivate EmailsManager

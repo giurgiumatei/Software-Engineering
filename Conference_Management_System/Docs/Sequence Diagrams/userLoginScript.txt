@@ -1,0 +1,18 @@
+title User Login
+
+actor User
+User->Login Form: Insert credentials
+activate Login Form
+Login Form->(5)Credentials Manager: Send credentials
+deactivate Login Form
+activate Credentials Manager
+destroy Login Form
+database Database Server
+Credentials Manager->(5)Database Server: Validate credentials
+deactivate Credentials Manager
+activate Database Server
+destroy Credentials Manager
+Database Server-->User:Validation response
+deactivate Database Server
+destroyafter Database Server
+

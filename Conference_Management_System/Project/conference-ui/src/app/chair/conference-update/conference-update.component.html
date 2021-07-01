@@ -1,0 +1,53 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="title">Chair Update Conference</div>
+  </div>
+  <div class="row">
+    <form class="updateConferenceForm" [formGroup]="updateConferenceForm" *ngIf="updateConferenceForm" >
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input formControlName="name" type="text" id="name" name="name" placeholder="Name" class="form-control" >
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input formControlName="startDate" type="date" id="startDate" class="form-control" name="startDate" placeholder="Start">
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input formControlName="endDate" type="date" id="endDate" class="form-control" name="endDate" placeholder="End">
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="wrapper">
+        <div class="row submitButton" >
+          <button type="submit" value="Add" (click)="updateConference()" class="btn btn-primary btn-lg btn-block">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

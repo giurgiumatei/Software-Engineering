@@ -1,0 +1,59 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+
+<h2>Paper: {{selectedPaper.title}}</h2>
+
+<div>Contents: {{selectedPaper.content}}</div><hr>
+<div class="container">
+  <div class="row">
+    <form [formGroup]="gradingForm" (ngSubmit)="onSubmit()" class="submit-form">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <select class="form-control" formControlName="grade" style="margin-top: 5px; margin-left: 5px">
+            <!--    <option disabled selected value="" > choose a grade </option>-->
+            <option *ngFor="let possibleReviewValue of possibleReviewValues" [ngValue]="possibleReviewValue"> {{possibleReviewValue}} </option>
+          </select>
+        </div>
+        <div class="col-md-4"></div>
+
+      </div>
+
+      <div class="row">
+          <textarea formControlName="comments" class="form-control textarea"
+                    rows="10"  id="Message" placeholder="Additional Comments"></textarea>
+         <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Review</button>
+        </div>
+
+        <div class="col-md-4"></div>
+      </div>
+
+
+
+
+
+    </form><hr>
+  </div>
+
+
+  <ol class="papers">
+    <li *ngFor="let review of allReviews">
+      {{review.paperTitle}} | {{review.value}} | {{review.comment}}
+    </li>
+  </ol>
+</div>
+
+

@@ -1,0 +1,28 @@
+title Paper bidding
+
+actor Pc Member
+activate Scheduler
+Scheduler->(1)Paper Manager: Check bidding phase and request Papers
+activate Paper Manager
+deactivate Scheduler
+destroyafter Scheduler
+database Database Server
+Paper Manager->(1)Database Server: Get all papers request
+deactivate Paper Manager
+activate Database Server
+Database Server->(2)Paper Manager: Send all papers
+deactivate Database Server
+activate Paper Manager
+Paper Manager->(2)Pc Member: Send all papers
+deactivate Paper Manager
+activate Pc Member
+Pc Member->(2)Paper Manager: Send selected papers
+deactivate Pc Member
+activate Paper Manager
+Paper Manager->(2)Database Server: Send selected papers for saving
+deactivate Paper Manager
+destroy Paper Manager
+activate Database Server
+Database Server-->Pc Member: Selection response
+deactivate Database Server
+destroyafter Database Server

@@ -1,0 +1,14 @@
+title Listeners choose the section
+
+actor Listener
+Listener->Section Manager:request to participate in a section
+activate Section Manager
+database Database
+Section Manager->Database: sections query
+deactivate Section Manager
+Database-->Listener: reply available sections
+Listener->Section Manager: choose section
+activate Listener
+Section Manager->Database: save tuple
+deactivate Listener
+Listener->Listener:section chosen

@@ -1,0 +1,23 @@
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<div class="papers-page">
+<h1 style="color: white; margin-top: 50px; font-family: 'Lato', sans-serif;">Pc Member Page</h1>
+<h2 style="color: darkblue;font-family: 'Lato', sans-serif;">Available papers for bidding</h2>
+<ol class="papers">
+  <li *ngFor="let paper of papersForBidding">
+    {{paper.title}}
+    <button class="updateButton" [class.update] = "true" (click)="bidPaper(paper);$event.stopPropagation()" >Bid</button>
+  </li>
+</ol>
+
+<h2 style="color: darkblue;font-family: 'Lato', sans-serif;">Available papers for reviewing</h2>
+<ol class="papers">
+  <li *ngFor="let paper of papersAssignedForReviewing">
+    {{paper.title}}
+        <button class="updateButton" [class.update] = "true" (click)="reviewPaper(paper);$event.stopPropagation()" >Review</button>
+  </li>
+</ol>
+</div>

@@ -1,0 +1,18 @@
+.conference-page{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+
+}
+.conferences li{
+  font-size: 23.5px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  margin-bottom:50px;
+  font-family: 'Lato', sans-serif;
+  color: #353839;
+
+}
+

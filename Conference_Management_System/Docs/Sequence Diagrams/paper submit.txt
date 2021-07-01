@@ -1,0 +1,39 @@
+title Submit Paper
+
+actor Author
+
+participant Paper Manager
+participant Scheduler
+database Database
+
+
+Author->Paper Manager:1:Submit paper
+activate Paper Manager
+Paper Manager->Scheduler:2:Send paper further
+deactivate Paper Manager
+activate Scheduler
+
+deactivate Scheduler
+activate Scheduler
+Scheduler->Database:4:Save paper
+deactivate Scheduler
+activate Database
+deactivateafter Database
+Author<--Scheduler:5:Author is notified of outcome
+Author->Paper Manager:6:Submit updated paper
+activate Paper Manager
+Paper Manager->Scheduler:7:Send updated version
+deactivate Paper Manager
+activate Scheduler
+Scheduler->Scheduler:8:Check if that paper exists
+deactivate Scheduler
+activate Scheduler
+Scheduler->Database:9:Update in database
+deactivate Scheduler
+activate Database
+deactivateafter Database
+
+activate Database
+deactivateafter Database
+Author<--Scheduler:10:Author is notified of update
+

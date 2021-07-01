@@ -1,0 +1,38 @@
+title PC member review process
+
+actor PC member
+participant Review Manager
+participant Scheduler
+database Database
+
+PC member->Review Manager:1: Request assigned papers
+activate Review Manager
+
+Review Manager->Scheduler:2:Send request further
+deactivate Review Manager
+
+activate Scheduler
+Scheduler->Database:4:Database query
+deactivate Scheduler
+activate Database
+Review Manager<--Database:5:Database reply
+deactivate Database
+
+PC member<--Review Manager:6. PC member is provided with requested papers
+activate PC member
+
+
+PC member->Review Manager: 7. Send commited review 
+
+
+deactivate PC member
+activate Review Manager
+Review Manager->Scheduler:8:Send updates
+deactivate Review Manager
+
+activate Scheduler
+Scheduler->Database:10:Update Database
+deactivate Scheduler
+
+
+

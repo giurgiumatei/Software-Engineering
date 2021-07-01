@@ -1,0 +1,24 @@
+.conference-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+
+}
+input {
+  width: 220px;
+  height: 31px;
+  border: 3px solid #ccc;
+  transition: 0.7s;
+  outline: none;
+}
+label{
+  font-size: 19px;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 5px;
+
+}
+.button{
+  width: 8%;
+  margin-bottom: 25px;
+}

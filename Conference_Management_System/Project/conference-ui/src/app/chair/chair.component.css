@@ -1,0 +1,132 @@
+#conferences {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#conferences td, #conferences th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+/*#conferences tr:nth-child(even){background-color: #f2f2f2;}*/
+
+/*#conferences tr:hover {background-color: #ddd;}*/
+
+#conferences th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00CFFF;
+  color: white;
+}
+
+.conference-page{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+
+}
+.buttons{
+  margin-top: 20px;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+.button-style{
+  display:inline-block;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+  border-radius: 5px;
+  margin-top: 4.5px;
+}
+.button-style:hover{
+  background-color: cornflowerblue;
+}
+.button-style:active{
+  top:0.1em;
+}
+
+input[type=text]{
+  width: 170px;
+  height: 30px;
+  border:3px solid #ccc;
+  transition: 0.7s;
+  outline: none;
+}
+input[type=submit]{
+  display:inline-block;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#3369ff;
+  background-color:#FFF;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+  border-radius: 5px;
+  margin-top: 4.5px;
+}
+select[name=types]{
+  width: 170px;
+  height: 38px;
+  border:3px solid #ccc;
+  transition: 0.7s;
+  outline: none;
+}
+ .conferences li{
+  font-size: 23.5px;
+  font-weight: 500;
+   border-bottom: 1px solid black;
+   margin-bottom:25px;
+   font-family: 'Lato', sans-serif;
+   color: #353839;
+
+}
+.updateButton{
+  display:inline-block;
+  padding:0.46em 1.6em;
+  border:0.1em solid #000000;
+  margin:0 0.2em 0.2em 0;
+
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:500;
+  color:#000000;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  background-color:#FFFFFF;
+  text-align:center;
+
+  transition: all 0.15s;
+  border-radius: 3px;
+}
+.updateButton:hover{
+  text-shadow: 0 0 2em rgba(255,255,255,1);
+  color:#000;
+  border-color:#FFFFFF;
+}
+
+
+

@@ -1,0 +1,25 @@
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+</head>
+<div class="conference-page">
+  <h1 style="color: white;font-family: 'Lato', sans-serif; margin-bottom: 30px">Chair Sections</h1>
+  <label>Number of participants</label><input #numberInput/><br/>
+    <label>Name</label><input #nameInput/><br/>
+    <label>Start date (yyyy-mm-dd)</label><input #startTimeInput/><br/>
+    <label>End date (yyyy-mm-dd)</label><input #endTimeInput/><br/>
+  <button (click) ="saveSection(numberInput.value,nameInput.value,startTimeInput.value, endTimeInput.value)" class="btn btn-primary btn-lg btn-block button">
+    Save</button>
+</div>
+

@@ -1,0 +1,19 @@
+
+  <h2>Create a conference</h2>
+
+<form class="top-form" [formGroup]="createConferenceForm">
+  <input formControlName="name" type="text" id="name" class="fadeIn second"
+         name="name" placeholder="Name">
+  <input formControlName="startDate" type="date" id="startDate"
+         class="fadeIn third" name="startDate" placeholder="Start">
+  <input formControlName="endDate" type="date" id="endDate"
+         class="fadeIn third" name="endDate" placeholder="End">
+  <input type="submit" class="button-style" value="Add" (click)="createConference()">
+</form>
+
+<br> <br>
+<h2>Invite Chairs</h2>
+<form class="bottom-form" [formGroup]="inviteChairForm">
+  <input type="text" formControlName="email" placeholder="Email">
+  <input type="submit" class="button-style" value="Invite" (click)="inviteChair()">
+</form>

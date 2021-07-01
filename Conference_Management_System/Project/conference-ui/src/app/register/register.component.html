@@ -1,0 +1,33 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img class="image" src="https://image.shutterstock.com/image-vector/vector-illustration-modern-blue-web-260nw-1841876773.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form  [formGroup]="registerForm">
+      <input formControlName="username" type="user" id="login" class="fadeIn second"
+             name="login" placeholder="username">
+      <input formControlName="email"  type="email" id="email" class="fadeIn second"
+             name="login" placeholder="email">
+      <input formControlName="password"  type="password" id="password" class="fadeIn third"
+             name="login" placeholder="password">
+      <select formControlName="type"  class="fadeIn third">
+        <option style="display:flex; align-items: center;" value="author">Author</option>
+        <option style="display:flex; justify-content: center" value="listener">Listener</option>
+      </select>
+      <a routerLink = "/login">
+        <input (click)="onSubmit()" type="submit" class="fadeIn fourth" value="Register" >
+      </a>
+    </form>
+
+  </div>
+</div>

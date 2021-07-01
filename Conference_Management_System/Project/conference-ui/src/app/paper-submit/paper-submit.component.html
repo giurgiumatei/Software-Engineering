@@ -1,0 +1,62 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<div class="container">
+  <div class="row">
+    <div class="title">Paper Submitting</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <select class="form-control" name="conference" id="conference" [(ngModel)]="selectedConference">
+        <option *ngFor="let conference of conferences" [ngValue]="conference">
+          {{conference.name}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+    <div class="row">
+      <form [formGroup]="submitForm" role="form" id="submit-form" class="submit-form">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <input formControlName="title" type="text" class="form-control" name="Name"
+                   autocomplete="off" id="Name" placeholder="Title">
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <textarea formControlName="content" class="form-control textarea"
+                      rows="10" name="Message" id="Message" placeholder="Text"></textarea>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <div class="row submitButton" >
+          <button (click)="onSubmit()" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </div>
+      </div>
+    </form></div>
+
+</div>
+
+<!--<select name="conference" id="conference" [(ngModel)]="selectedConference">
+  <option *ngFor="let conference of conferences" [ngValue]="conference">
+    {{conference.name}}
+  </option>
+</select>-->

@@ -1,0 +1,17 @@
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<div class="conference-page">
+  <h1 style="color: white; margin-top: 50px; font-family: 'Lato', sans-serif;">Listener Page</h1>
+  <h2 style="color: rebeccapurple; margin-bottom: 50px;font-family: 'Lato', sans-serif;">Available Conferences</h2>
+<ol class="conferences">
+  <li *ngFor="let conference of conferences" [class.selected]="conference === selectedConference"
+  (click)="onSelect(conference)">
+    {{conference.name}} --- {{conference.startDate}} --- {{conference.endDate}}
+  </li>
+
+
+</ol>
+</div>

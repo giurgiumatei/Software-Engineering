@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.ubb.conferencesystem.model.Author</OriginalElement>
+  <nodes>
+    <node x="0.0" y="532.0">com.ubb.conferencesystem.model.Paper</node>
+    <node x="714.1875" y="0.0">com.ubb.conferencesystem.model.Section</node>
+    <node x="244.97916666666674" y="587.5">com.ubb.conferencesystem.model.Author</node>
+    <node x="304.3125" y="788.5">com.ubb.conferencesystem.model.PCMember</node>
+    <node x="426.18750000000006" y="267.0">com.ubb.conferencesystem.model.User</node>
+    <node x="465.97916666666674" y="576.0">com.ubb.conferencesystem.model.Chair</node>
+    <node x="50.000000000000114" y="777.0">com.ubb.conferencesystem.model.Proposal</node>
+    <node x="686.1875" y="245.0">com.ubb.conferencesystem.model.Conference</node>
+    <node x="743.9791666666667" y="576.0">com.ubb.conferencesystem.model.Listener</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.ubb.conferencesystem.model.PCMember" target="com.ubb.conferencesystem.model.Author">
+      <point x="56.0" y="-42.0" />
+      <point x="472.3125" y="757.0" />
+      <point x="420.85416666666674" y="757.0" />
+      <point x="75.375" y="42.0" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Chair" target="com.ubb.conferencesystem.model.User">
+      <point x="-96.75" y="-53.5" />
+      <point x="498.22916666666674" y="512.0" />
+      <point x="504.52083333333337" y="512.0" />
+      <point x="-15.666666666666686" y="86.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Chair" target="com.ubb.conferencesystem.model.Conference">
+      <point x="32.25" y="-53.5" />
+      <point x="627.2291666666667" y="502.0" />
+      <point x="729.6875" y="502.0" />
+      <point x="-130.5" y="108.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Conference" target="com.ubb.conferencesystem.model.Section">
+      <point x="-87.0" y="-108.5" />
+      <point x="773.1875" y="220.0" />
+      <point x="787.1875" y="220.0" />
+      <point x="-73.0" y="97.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Listener" target="com.ubb.conferencesystem.model.User">
+      <point x="-102.0" y="-53.5" />
+      <point x="777.9791666666667" y="492.0" />
+      <point x="567.1875" y="492.0" />
+      <point x="47.0" y="86.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Proposal" target="com.ubb.conferencesystem.model.Paper">
+      <point x="-27.000000000000114" y="-53.5" />
+      <point x="131.0" y="757.0" />
+      <point x="156.0" y="757.0" />
+      <point x="52.0" y="97.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Proposal" target="com.ubb.conferencesystem.model.Author">
+      <point x="80.99999999999989" y="-53.5" />
+      <point x="239.0" y="757.0" />
+      <point x="320.35416666666674" y="757.0" />
+      <point x="-25.125" y="42.0" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Author" target="com.ubb.conferencesystem.model.User">
+      <point x="-50.25" y="-42.0" />
+      <point x="295.22916666666674" y="502.0" />
+      <point x="441.85416666666674" y="502.0" />
+      <point x="-78.33333333333331" y="86.5" />
+    </edge>
+    <edge source="com.ubb.conferencesystem.model.Listener" target="com.ubb.conferencesystem.model.Conference">
+      <point x="34.0" y="-53.5" />
+      <point x="913.9791666666667" y="512.0" />
+      <point x="903.6875" y="512.0" />
+      <point x="43.5" y="108.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9" x="973.9444444444448" y="427.44444444444446" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

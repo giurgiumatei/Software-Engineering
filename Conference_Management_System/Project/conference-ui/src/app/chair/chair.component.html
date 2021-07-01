@@ -1,0 +1,37 @@
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<div class="conference-page">
+
+<h1 style="color: white; margin-top: 50px; font-family: 'Lato', sans-serif;">Chair Page</h1>
+<h2 style="color: blue; margin-bottom: 50px;font-family: 'Lato', sans-serif;">Available Conferences</h2>
+<ol class="conferences">
+  <li *ngFor="let conference of conferences">
+    {{conference.name}} --- {{conference.startDate}} --- {{conference.endDate}}
+    <button class="updateButton" [class.update] = "true" (click)="updateConference(conference);$event.stopPropagation()" >Update</button>
+  </li>
+</ol>
+
+<h2 style="margin-top: 50px;font-family: 'Lato', sans-serif;">Invite other Chairs or PC Members</h2>
+<form class="bottom-form" [formGroup]="inviteForm">
+  <input type="text" formControlName="email" placeholder="Email">
+  &nbsp; &nbsp;
+  <select name="types" formControlName="memberType">
+    <option value="Chair">Chair</option>
+    <option value="PC Member">PC Member</option>
+  </select>
+  &nbsp;
+  <input type="submit" class="" value="Invite" (click)="invite()">
+</form>
+
+  <div class="buttons">
+<button class="button-style">
+  <a style="text-decoration: none; color: whitesmoke" href="/submit/1">Add Paper</a>
+</button>
+<button class="button-style">
+  <a style="text-decoration: none; color: whitesmoke" href="/chair-sections">Add Section</a>
+</button>
+  </div>
+</div>
